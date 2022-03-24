@@ -1,0 +1,209 @@
+body{
+    background-color: #1E1E1E;
+    margin: 2px;
+}
+
+h1, h2, p{
+    color: #DBDBDB;
+}
+
+h3{
+    color: #F28705;
+}
+
+footer{
+    text-align: center;
+    background-color: #023373;
+    padding: 5px;
+}
+
+footer p{
+    padding: 1px;
+    margin: 0;
+}
+
+#menu-header:checked ~ .nav-header{
+    display: block;
+}
+/*
+.fixed-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.logo-header{
+    grid-column-start: col-start 0;
+    justify-self: start;
+    align-self: center;
+}
+.menu-toggle{
+    grid-column-start: col-start 1;
+    justify-content: end;
+    align-self: center;
+
+}*/
+.menu-toggle label{
+    padding-left: 34px;
+    padding-right: 34px;
+}
+
+.fixed-header{
+    display:flex;
+    flex-basis: 100%;
+    justify-content:space-between;
+    background-image: linear-gradient(#023373, #011E43, #011A3A);
+    height: 75px;
+}
+
+.fixed-header img{
+    height: 60px;
+    padding: 5px;
+}
+
+.nav-header li, .fixed-header label{
+    font-size: 23px;
+    color: #DBDBDB;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    width: 122px;
+    background-color: #3D1B21;
+    text-align: center;
+}
+
+.nav-header{
+    display: none;
+    list-style-type: none;
+
+}
+
+#menu-header{
+    display: none;
+    margin: 10px;
+}
+
+.featured-games img{
+    width: 200px;
+}
+
+.hero-image{
+    background-image: url(../images/background/keyboard.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+ }
+
+
+/* SEARCH BAR */
+
+.all-games{
+    grid-area: allgames;
+}
+
+.check-out{
+    grid-area: checkout;
+}
+
+.search-bar{
+    grid-area: searchbar;
+}
+
+.choose-filter{
+    grid-area: filter;
+}
+.nav-games ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 5px 5px;
+    grid-template-areas: 
+    "allgames checkout"
+    "searchbar searchbar"
+    "filter filter";
+}
+
+.nav-games ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+ .nav-games li{
+     background-color: #023373;
+     border: 1px solid gray;
+     color: #DBDBDB;
+     padding: 5px;
+     border-radius: 5px;
+ }
+
+ /* FEATURED GAMES */
+
+ .featured-games h2{
+     text-align: center;
+     padding: 10px;
+ }
+
+ .featured-games{
+    background-image: linear-gradient(#023373, #011A3A);
+    width: 100%;
+    box-shadow: 0px 2px;
+    margin-top: 60px;
+ }
+
+ .featured-games ul{
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: auto;
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+ }
+
+ .featured-games li{
+     padding: 20px;
+ }
+
+ .featured-games li > *{
+     margin: 0;
+ }
+
+ /* SPOTLIGHT GAMES */
+
+ .spotlight-nav{
+     display: flex;
+     background-image:radial-gradient(#023373, #011A3A);
+    }
+
+.spotlight-nav p{
+    flex-grow: 1;
+    flex-basis: 0;
+    border: 2px solid #707070;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.spotlight-games{
+    background-image: linear-gradient(#023373, #011A3A);
+    margin-top: 60px;
+}
+
+.spotlight-list img{
+    float: left;
+    width: 30vh;
+    padding-right: 10px;
+}
+
+.tags p{
+    display: inline-flex;
+    background-color: #707070;
+    margin: 0;
+    padding: 0;
+}
+
+.spotlight-list{
+    display: grid;
+    margin: 2px;
+}
+
+.spotlight-list div{
+    padding: 5px;
+}
