@@ -1,0 +1,288 @@
+@font-face{
+    font-family: 'Expressway';
+    src:local(fonts\expressway);
+}
+
+
+body{
+    background-color: #1E1E1E;
+    margin: 2px;
+    font-family: 'Expressway';
+    
+}
+
+h1, h2, p{
+    color: #DBDBDB;
+}
+
+h3{
+    color: #F28705;
+}
+
+footer{
+    text-align: center;
+    background-color: #023373;
+    padding: 5px;
+}
+
+footer p{
+    padding: 1px;
+    margin: 0;
+}
+
+
+#menu-header:checked ~ .nav-header{
+    display: block;
+}
+
+.menu-toggle label{
+    padding-left: 34px;
+    padding-right: 34px;
+}
+
+.menu-toggle{
+    margin-top: 10px;
+}
+
+.fixed-header{
+    display:flex;
+    flex-basis: 100%;
+    justify-content:space-between;
+    background-image: linear-gradient(#023373, #011E43, #011A3A);
+    height: 75px;
+}
+
+.fixed-header img{
+    height: 60px;
+    padding: 5px;
+}
+
+
+.nav-header li, .fixed-header label{
+    font-size: 23px;
+    color: #DBDBDB;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    background-color: #3D1B21;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-header{
+    display: none;
+    list-style-type: none;
+    margin-top: 10px;
+
+}
+
+#menu-header{
+    display: none;
+    margin: 10px;
+}
+
+@media only screen and (min-width: 900px){
+    .nav-header{
+        display:flex;
+        flex-wrap: nowrap;
+        flex-direction:row;
+        margin-top: 10px;
+        margin-right: 5px;
+    }
+
+    .nav-header > li{
+        margin: 2px;
+        padding: 10px
+    }
+    .menu-toggle label{
+        display: none;
+    }
+    
+}
+
+
+.featured-games img{
+    width: 200px;
+}
+
+.hero-image{
+    background-image: url(../images/background/keyboard.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+ }
+
+ .hero-image h1, p{
+     margin: 5px;
+ }
+
+ .hero-motto{
+     margin: 5px;
+     font-style: italic;
+ }
+
+ .hero-image h3{
+     color: #DBDBDB;
+     font-family: 'Expressway';
+     margin: 5px;
+     margin-bottom: 35px;
+
+ }
+
+
+@media screen and (min-width: 600px){
+    .hero-image{
+        height: 40vh;
+    }
+}
+/* SEARCH BAR */
+
+.all-games{
+    grid-area: allgames;
+}
+
+.check-out{
+    grid-area: checkout;
+}
+
+.search-bar{
+    grid-area: searchbar;
+}
+
+.choose-filter{
+    grid-area: filter;
+}
+
+.nav-games ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 5px 5px;
+    grid-template-areas: 
+    "allgames checkout"
+    "searchbar searchbar"
+    "filter filter";    
+}
+
+@media screen and (min-width: 600px){
+    .nav-games ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 5px 5px;
+        grid-template-areas:
+        "allgames checkout searchbar filter";
+        max-width: 1150px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+
+.nav-games ul{
+    list-style-type: none;
+    padding:0;
+}
+ .nav-games li{
+     background-color: #023373;
+     border: 1px solid gray;
+     color: #DBDBDB;
+     padding: 5px;
+     border-radius: 5px;
+ }
+
+ /* FEATURED GAMES */
+
+ .featured-games h2{
+     text-align: center;
+     padding: 10px;
+ }
+
+ .featured-games{
+    background-image: linear-gradient(#023373, #011A3A);
+    width: 100%;
+    box-shadow: 0px 2px;
+    margin-top: 60px;
+ }
+
+ .featured-games ul{
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: auto;
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+ }
+
+ @media screen and (min-width: 900px){
+    .featured-games ul{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .featured-games{
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+ }
+
+ .featured-games li{
+     padding: 20px;
+ }
+
+ .featured-games li > *{
+     margin: 0;
+ }
+
+ /* SPOTLIGHT GAMES */
+
+ .spotlight-nav{
+     display: flex;
+     background-image:radial-gradient(#023373, #011A3A);
+    }
+
+.spotlight-nav p{
+    flex-grow: 1;
+    flex-basis: 0;
+    border: 2px solid #707070;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.spotlight-games{
+    background-image: linear-gradient(#023373, #011A3A);
+    margin-top: 60px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spotlight-list img{
+    float: left;
+    width: 30vh;
+    padding-right: 10px;
+}
+
+.spotlight-list h3{
+    margin-top: 0;
+}
+
+.tags p{
+    display: inline-flex;
+    background-color: #707070;
+    margin: 1px;
+    padding: 0;
+}
+
+.spotlight-list{
+    display: grid;
+    margin: 2px;
+}
+
+.spotlight-list div{
+    padding: 5px;
+}
